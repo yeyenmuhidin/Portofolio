@@ -29,13 +29,15 @@ Open http://127.0.0.1:8080/
 
 ## GitHub Pages
 
-Publish this folder as a public repository `yeyenmuhidin/Portofolio`, then enable Pages:
+`.github/workflows/pages.yml` deploys the repository root on every push to `main`. It configures Pages (`enablement: true`), uploads the static root, and deploys it. There is no build step.
 
-- Source: Deploy from a branch
-- Branch: `main`
-- Folder: `/ (root)`
+Creating the Pages site needs repository administration permission, which the workflow's `GITHUB_TOKEN` does not have. If the first run fails with "Create Pages site failed" / "Resource not accessible by integration":
 
-The site is static HTML, CSS, and a little JavaScript. No build step.
+1. Open **Settings → Pages**.
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+3. Re-run the failed **Deploy to GitHub Pages** workflow.
+
+The site is static HTML, CSS, and a little JavaScript.
 
 ## Contents
 
