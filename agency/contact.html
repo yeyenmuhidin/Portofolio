@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Arunika (Concept Demo)</title>
+  <meta name="description" content="Demo contact page. The form does not send messages. Hire Yeyen M on Upwork.">
+  <meta name="author" content="Yeyen M">
+  <link rel="icon" href="../assets/arunika-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Outfit:wght@400;500;580;650&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="demo-banner">Concept demo by <a href="../">Yeyen M</a> · Not a commissioned client project · Fictional studio</div>
+  <header class="site">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 64 64" fill="none" aria-hidden="true"><circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="1.5"/><path d="M16 40c8-16 24-16 32 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M22 36c6-10 14-10 20 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="32" cy="24" r="3" fill="currentColor"/></svg>
+      Arunika
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open menu"></button>
+    <nav aria-label="Primary">
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="approach.html">Approach</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main">
+    <header class="page-hero">
+      <p class="kicker">Contact</p>
+      <h1>Tell us about the work. This form does not send.</h1>
+    </header>
+    <section class="split">
+      <div class="prose">
+        <p>This contact page is part of a concept demo. Submitting the form will not email anyone and will not create a project. If you want to hire the designer who built this site, use the Upwork profile instead.</p>
+        <p><a href="https://www.upwork.com/freelancers/~013d0ae5dbf8b68356" rel="noopener">Open Yeyen M on Upwork →</a></p>
+      </div>
+      <form class="contact" id="demo-form" action="#" method="post" novalidate>
+        <div class="form-note">Demo form — messages stay in this browser and are not delivered.</div>
+        <div>
+          <label for="name">Name</label>
+          <input id="name" name="name" autocomplete="name">
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email">
+        </div>
+        <div>
+          <label for="company">Company</label>
+          <input id="company" name="company" autocomplete="organization">
+        </div>
+        <div>
+          <label for="brief">What do you need?</label>
+          <textarea id="brief" name="brief" rows="5"></textarea>
+        </div>
+        <button class="btn solid" type="submit">Send a brief (demo)</button>
+        <div class="form-ok" id="form-ok" role="status">This is a demonstration form, so nothing was sent. To reach Yeyen M, please use the Upwork profile linked on this page.</div>
+      </form>
+    </section>
+    <script>
+      document.getElementById("demo-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        document.getElementById("form-ok").style.display = "block";
+      });
+    </script>
+
+  </main>
+  <footer class="site">
+    <div>Arunika is a fictional studio created as a design demonstration by <a href="../">Yeyen M</a>.</div>
+    <div>Pati, Indonesia · <a href="contact.html">Contact</a></div>
+  </footer>
+  <script src="nav.js"></script>
+</body>
+</html>
